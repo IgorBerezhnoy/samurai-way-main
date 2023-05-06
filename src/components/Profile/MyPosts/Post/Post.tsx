@@ -1,13 +1,18 @@
 import React from 'react';
 import classes from './Post.module.css';
 
-export const Post = () =>
+type PostPropsType = {
+    message: string,
+    like:number
+
+}
+export const Post = (props:PostPropsType) =>
     (
         <div className={classes.item}><img
             src="https://mir-s3-cdn-cf.behance.net/user/276/72bf191180636107.63ccd92aa95c0.png"/>
-            post 1
+            {props.message}
             <div>
-                <span>like</span>
+                <span>{props.like}</span>
             </div>
 
         </div>
